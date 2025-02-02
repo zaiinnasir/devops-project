@@ -1,0 +1,31 @@
+name: Production CI/CD
+
+on:
+  pull_request:
+    branches:
+      - production
+  push:
+    branches:
+      - production
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Final Tests
+        run: npm test
+
+      - name: Lint Code
+        run: npm run lint
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Manual Approval for Deployment
+        run: echo "Waiting for manual approval before deployment..."
+
+      - name: Deploy to Production
+        run: echo "Deploying to production environment..."
