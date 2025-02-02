@@ -1,7 +1,20 @@
 {
-  "attr-lowercase": true,
-  "tag-pair": true,
-  "doctype-first": true,
-  "id-unique": true,
-  "attr-value-double-quotes": true
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-hex-case": "lower",
+    "indentation": 2,
+    "max-empty-lines": 1,
+    "no-empty-source": true,
+    "no-unknown-animations": true,
+    "no-missing-end-of-source-newline": true,
+    "string-quotes": "double",
+    "block-no-empty": true,
+    "declaration-colon-space-before": "never",
+    "selector-max-id": 1,
+    "attr-lowercase": true,
+    "tag-pair": true,
+    "doctype-first": true,
+    "id-unique": true,
+    "attr-value-double-quotes": true
+  }
 }
